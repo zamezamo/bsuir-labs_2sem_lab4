@@ -40,10 +40,11 @@ int main()
     {
         fprintf(file, "%d ", number[i]);
     }
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", number[i]);
-    }
     fclose(file);
+    FILE *output = fopen("task1.txt", "rt");
+    char str[128];
+    fgets(str, 2*n, file);
+    fclose(file);
+    printf("%s", str);
     return 0;
 }
